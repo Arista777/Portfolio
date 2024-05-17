@@ -12,26 +12,44 @@
             padding: 0;
             background: linear-gradient(to bottom right, #4CAF50, #2196F3);
             color: #fff; /* Color de texto */
+            text-align: center;
+            width: 100%;
         }
+        .header {
+              padding: 30px;
+              font-size: 30px;
+              text-align: justify;
+             
+              }
         .container {
-            max-width: 800px;
+            
             margin: 0 auto;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
             border-radius: 10px; /* Bordes redondeados */
+            text-align: justify;
         }
         h1 {
             margin-bottom: 20px;
             text-align: center; /* Centrar el título */
         }
         .post {
-            margin-bottom: 40px;
+
+            margin: 10px;
+            
         }
         .post h2 {
-            margin-bottom: 10px;
+            text-align: justify;
+            font-size: 20px;
+            
         }
         .post p {
-            margin-bottom: 10px;
+            
+            height: max-content;
+            margin: 10px;
+            text-align: justify;
+            
+            
         }
         a {
             color: #fff; /* Color de los enlaces */
@@ -44,36 +62,55 @@
         a:hover {
             background-color: #0b7dda; /* Cambio de color al pasar el mouse */
         }
+        img {
+            text-align: justify;
+            overflow: hidden;
+            width: 70%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
+    <header class="header">
+        <h1>How to Create Your Own Website with HTML and CSS</h1>
+    </header>
+
     <div class="container">
-        <h1>Cómo crear una página web</h1>
-        <p>En este tutorial, aprenderás cómo crear una página web básica utilizando HTML y CSS. No se requiere experiencia previa en programación, ¡así que manos a la obra!</p>
-        <div class="post">
-            <h2>Paso 1: Configurar el archivo HTML</h2>
-            <p>
-                Abre tu editor de texto favorito (como Notepad, Sublime Text, Visual Studio Code, etc.).
-                Crea un nuevo archivo y guárdalo con el nombre "index.html".
-                </p>
-            <p>Primero hay que crear el tag DOCTYPE html  </p>
+        <section class="post">
+            <h2>What is HTML and CSS?</h2>
+            <p>HTML provides the foundation for webpage content, allowing you to add elements like headings, paragraphs, lists, images, videos, and links. With CSS, you can enhance your webpage by styling and customizing elements, such as adjusting colors, fonts, and layouts.</p>
+        </section>
+
+        <section class="post">
+            <ul><li><h2>Step 1 - Set up your text editor and HTML file</h2></li></ul>
+            <p>To begin using HTML, you'll need a text editor, which is a software program for writing code. Your first step is to download a free text editor. Notepad++ is a good option for Windows users, while Sublime Text is popular among Mac users. Once you open the text editor, you'll see an editor window where you can write your HTML code.</p>
+            <p>Make sure you save this new file with the name index.html on a folder with the name "Your first web page".</p>
+            <p>With the text editor open, you're ready to start creating HTML tags. HTML tags are the building blocks of a webpage, used to structure and format content. Remember to save your file with a .html extension to ensure it's recognized as an HTML document. Now, let's get started building your webpage!</p>
+            <p>Start by adding this elements</p>
+            <ol>
+                <li>DOCTYPE  Declaration</li>
+                <li>html tags</li>
+                <li> language attribute</li>
+                <li>Head and Body sections </li>
+            </ol>
+        
+            <img src="/img/ejemplo1.png" alt="Example">
             
-            <a href="#">Leer más</a>
-        </div>
-        
-        <div class="post">
-            <h2>Título de la Entrada 2</h2>
-            <p>Fecha: 2 de enero de 2024</p>
-            <p>Contenido de la entrada 2...</p>
-            <a href="#">Leer más</a>
-        </div>
-        
-        <div class="post">
-            <h2>Título de la Entrada 3</h2>
-            <p>Fecha: 3 de enero de 2024</p>
-            <p>Contenido de la entrada 3...</p>
-            <a href="#">Leer más</a>
-        </div>
+        </section>
+
+        <section class="post">
+            <h2>Title of Entry 2</h2>
+            <p>Date: January 2, 2024</p>
+            <p>Content of entry 2...</p>
+            <a href="#">Read more</a>
+        </section>
+
+        <section class="post">
+            <h2>Title of Entry 3</h2>
+            <p>Date: January 3, 2024</p>
+            <p>Content of entry 3...</p>
+            <a href="#">Read more</a>
+        </section>
     </div>
 </body>
 </html>
