@@ -1,5 +1,6 @@
-my first # Portfolio
+Hello World , this is my first portfolio .
 
-Hello world hope you enjoy my work 
-
-contact me lets connect 
+html 
+css
+java 
+2024
