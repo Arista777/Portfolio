@@ -2,5 +2,5 @@ Hello World , this is my first portfolio .
 
 html 
 css
-java 
+javaScript
 2024
