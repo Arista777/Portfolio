@@ -17,14 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const submitBtn = document.getElementById("submitBtn");
     const downloadBtn = document.getElementById("downloadBtn");
 
-    // Función para enviar el formulario
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita que se recargue la página
-        // Aquí puedes guardar los datos del formulario, por ejemplo, enviándolos a un servidor o almacenándolos en una base de datos
-        // Puedes acceder a los valores de los campos del formulario utilizando el ID de cada uno (por ejemplo, document.getElementById("name").value)
-        // Aquí simplemente mostramos una alerta
-        alert("Formulario enviado correctamente.");
-    });
+    
 
     // Función para descargar el CV
     downloadBtn.addEventListener("click", function() {
