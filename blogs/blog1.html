@@ -1,177 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
-            color: #fff; /* Color de texto */
-            text-align: center;
-            width: 100%;
-        }
-        .header {
-              padding: 30px;
-              font-size: 30px;
-              text-align: justify;
-             
-              }
-        .container {
-            
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: justify;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center; /* Centrar el título */
-        }
-        .post {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Create Your Own Website with HTML and CSS</title>
+  <style>
+    :root {
+      --primary: #2196f3;
+      --secondary: #4caf50;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text: #f1f5f9;
+      --accent: #38bdf8;
+      --radius: 12px;
+      --max-width: 900px;
+    }
 
-            margin: 10px;
-            
-        }
-        .post h2 {
-            text-align: justify;
-            font-size: 20px;
-            
-        }
-        .post p {
-            
-            height: max-content;
-            margin: 10px;
-            text-align: justify;
-            
-            
-        }
-        a {
-            color: #fff; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block;
-            background-color: #2196F3; /* Color de fondo del botón */
-            padding: 8px 16px; /* Espaciado del botón */
-            border-radius: 5px; /* Bordes redondeados del botón */
-        }
-        a:hover {
-            background-color: #0b7dda; /* Cambio de color al pasar el mouse */
-        }
-        img {
-            text-align: justify;
-            overflow: hidden;
-            width: 70%;
-            height: 100%;
-        }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--text);
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(15, 23, 42, 0.85);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #d1e7ff;
+      margin-top: 10px;
+    }
+
+    .post {
+      margin-bottom: 40px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .post:hover {
+      transform: translateX(6px);
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+
+    .post h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .post p,
+    .post ul,
+    .post ol,
+    .post pre {
+      margin-bottom: 15px;
+      color: #e2e8f0;
+    }
+
+    .post ul,
+    .post ol {
+      margin-left: 25px;
+    }
+
+    pre {
+      background-color: rgba(30, 41, 59, 0.8);
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: #93c5fd;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0b7dda;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>How to Create Your Own Website with HTML and CSS</h1>
+  <div class="container">
+    <header>
+      <h1>How to Create Your Own Website with HTML and CSS</h1>
+      <p>Learn to build and style your first website from scratch</p>
     </header>
 
-    <div class="container">
-        <section class="post">
-            <h2>What is HTML and CSS?</h2>
-            <p>HTML provides the foundation for webpage content, allowing you to add elements like headings, paragraphs, lists, images, videos, and links. With CSS, you can enhance your webpage by styling and customizing elements, such as adjusting colors, fonts, and layouts.</p>
-        </section>
+    <section class="post">
+      <h2>What is HTML and CSS?</h2>
+      <p>HTML provides the structure of a webpage, allowing you to add elements like headings, paragraphs, lists, images, videos, and links. CSS enhances the page by styling and customizing elements, defining colors, fonts, and layouts.</p>
+    </section>
 
-        <section class="post">
-            <ul><li><h2>Step 1 - Set up your text editor and HTML file</h2></li></ul>
-            <p>To begin using HTML, you'll need a text editor, which is a software program for writing code. Your first step is to download a free text editor. Notepad++ is a good option for Windows users, while Sublime Text is popular among Mac users. Once you open the text editor, you'll see an editor window where you can write your HTML code.</p>
-            <p>Make sure you save this new file with the name index.html on a folder with the name "Your first web page".</p>
-            <p>With the text editor open, you're ready to start creating HTML tags. HTML tags are the building blocks of a webpage, used to structure and format content. Remember to save your file with a .html extension to ensure it's recognized as an HTML document. Now, let's get started building your webpage!</p>
-            <p>Start by adding this elements</p>
-            <ol>
-                <li>DOCTYPE  Declaration</li>
-                <li>html tags</li>
-                <li> language attribute</li>
-                <li>Head and Body sections </li>
-            </ol>
-            
-        </section>
+    <section class="post">
+      <h2>Step 1 – Set Up Your Text Editor and HTML File</h2>
+      <p>To begin, you'll need a text editor for writing code. Options include Notepad++ for Windows or Sublime Text for Mac. Create a new file called <code>index.html</code> inside a folder named "Your first web page".</p>
+      <p>Start by adding these fundamental elements:</p>
+      <ol>
+        <li>DOCTYPE declaration</li>
+        <li>HTML tags</li>
+        <li>Language attribute</li>
+        <li>Head and body sections</li>
+      </ol>
+    </section>
 
-        <section class="post">
-            <h2>Example of an HTML Document</h2>
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="en"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Example HTML Document&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-                    &lt;p&gt;This is an example of an HTML document.&lt;/p&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-        </section>
+    <section class="post">
+      <h2>Example of an HTML Document</h2>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Example HTML Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is an example of an HTML document.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
 
-        <section class="post">
-            <h2>Additional Elements to Include</h2>
-            <p>To make your website more comprehensive, you can include various elements such as:</p>
-            <ul>
-                <li>Headings and paragraphs</li>
-                <li>Lists (ordered and unordered)</li>
-                <li>Images and videos</li>
-                <li>Links to other pages or websites</li>
-            </ul>
-        </section>
+    <section class="post">
+      <h2>Additional Elements to Include</h2>
+      <p>You can add more structure and interactivity using:</p>
+      <ul>
+        <li>Headings and paragraphs</li>
+        <li>Lists (ordered and unordered)</li>
+        <li>Images and videos</li>
+        <li>Links to other pages or websites</li>
+      </ul>
+    </section>
 
-        <section class="post">
-            <h2>Styling Your Website with CSxS</h2>
-            <p>CSS (Cascading Style Sheets) allows you to apply styles to your HTML elements. You can define colors, fonts, spacing, and layout. Here is an example of CSS:</p>
-            <pre>
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                }
-                h1 {
-                    color: #333;
-                }
-                p {
-                    color: #666;
-                }
-            </pre>
-            <p>You can include CSS in your HTML file using the <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section, or you can link to an external CSS file.</p>
-        </section>
+    <section class="post">
+      <h2>Styling Your Website with CSS</h2>
+      <p>CSS (Cascading Style Sheets) lets you define visual styles for your HTML elements. Here's a simple example:</p>
+      <pre>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+h1 {
+  color: #333;
+}
+p {
+  color: #666;
+}
+      </pre>
+    </section>
 
-        <section class="post">
-            <h2>Example of an HTML Document with CSS</h2>
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="en"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Styled HTML Document&lt;/title&gt;
-                    &lt;style&gt;
-                        body {
-                            font-family: Arial, sans-serif;
-                            background-color: #f4f4f4;
-                        }
-                        h1 {
-                            color: #333;
-                        }
-                        p {
-                            color: #666;
-                        }
-                    &lt;/style&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-                    &lt;p&gt;This is an example of an HTML document with CSS.&lt;/p&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-        </section>
-    </div>
+    <section class="post">
+      <h2>Example of an HTML Document with CSS</h2>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Styled HTML Document&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is an example of an HTML document with CSS.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
+
+    <a href="../index.html#blogs">← Back to Blogs</a>
+  </div>
 </body>
 </html>

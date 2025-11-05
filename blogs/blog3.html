@@ -1,103 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become a Web Designer in 10 Days</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
-            color: #fff; /* Color de texto */
-            text-align: center;
-            width: 100%;
-        }
-        .header {
-              padding: 30px;
-              font-size: 30px;
-              text-align: justify;
-             
-              }
-        .container {
-            
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: justify;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center; /* Centrar el título */
-        }
-        .post {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Web Designer in 10 Days</title>
 
-            margin: 10px;
-            
-        }
-        .post h2 {
-            text-align: justify;
-            font-size: 20px;
-            
-        }
-        .post p {
-            
-            height: max-content;
-            margin: 10px;
-            text-align: justify;
-            
-            
-        }
-        a {
-            color: #fff; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block;
-            background-color: #2196F3; /* Color de fondo del botón */
-            padding: 8px 16px; /* Espaciado del botón */
-            border-radius: 5px; /* Bordes redondeados del botón */
-        }
-        a:hover {
-            background-color: #0b7dda; /* Cambio de color al pasar el mouse */
-        }
-        img {
-            text-align: justify;
-            overflow: hidden;
-            width: 70%;
-            height: 100%;
-        }
-    </style>
+  <style>
+    :root {
+      --primary: #2196f3;
+      --secondary: #4caf50;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text: #f1f5f9;
+      --accent: #facc15;
+      --radius: 12px;
+      --max-width: 900px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: var(--text);
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(15, 23, 42, 0.85);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #fdfdfd;
+      margin-top: 10px;
+    }
+
+    .post {
+      margin-bottom: 40px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .post:hover {
+      transform: translateX(6px);
+      background-color: rgba(250, 204, 21, 0.1);
+    }
+
+    .post h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      margin-bottom: 15px;
+      color: #e2e8f0;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      color: #cbd5e1;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--accent);
+      color: #1e1e1e;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #fde047;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>Become a Web Designer in 10 Days</h1>
+  <div class="container">
+    <header>
+      <h1>Become a Web Designer in 10 Days</h1>
+      <p>From zero to creative — transforming your future one line of code at a time.</p>
     </header>
 
-    <div class="container">
-        <section class="post">
-            <h2>Have you ever wanted to change your career to a completely new field, and you only have 10 days to do so? I got you!! In this blog, we will talk about thoughts that maybe we all have in common.</h2>
-            <p>Changing careers can be a daunting but rewarding experience. If you're passionate about web design and eager to learn, it's possible to become proficient in just 10 days. This blog will guide you through the essential steps and resources you need to kickstart your journey as a web designer.</p>
-        </section>
+    <section class="post">
+      <h2>Ready to Change Your Life in 10 Days?</h2>
+      <p>Switching careers is never easy — but it’s possible. If you’ve ever dreamed of building beautiful websites and bringing ideas to life through design, this guide will help you get started fast and effectively.</p>
+      <p>Here you’ll find a simple path to start your web design journey, learn the essentials, and create real projects in just ten days.</p>
+    </section>
 
-        <section class="post">
-            <ul><li><h2>Step 1 - Define Your Goals and Motivation</h2></li></ul>
-            <p>Before diving into the world of web design, take some time to define your goals and motivations. What inspired you to pursue this career change? Are you looking for a creative outlet, better job prospects, or increased earning potential?</p>
-            <p>Understanding your motivations will help you stay focused and committed throughout the learning process.</p>
-        </section>
+    <section class="post">
+      <h2>Step 1 – Define Your Goals and Motivation</h2>
+      <p>Before learning, take a moment to understand your “why.” What’s pushing you toward this change? Is it freedom, creativity, or opportunity?</p>
+      <p>Clarity gives direction — knowing your reason keeps you focused when challenges appear.</p>
+    </section>
 
-        <section class="post">
-            <h2>Explore Beginner-Friendly Learning Resources</h2>
-            <p>As a beginner in web design, it's essential to start with beginner-friendly learning resources. Explore online tutorials, courses, and guides tailored for beginners. Websites like Codecademy, freeCodeCamp, and MDN Web Docs offer comprehensive tutorials on HTML, CSS, and JavaScript.</p>
-            <p>Take advantage of these resources to familiarize yourself with the basics of web design and development.</p>
-        </section>
+    <section class="post">
+      <h2>Step 2 – Explore Beginner-Friendly Learning Resources</h2>
+      <p>You don’t need a degree to start designing — only curiosity and consistency. Platforms like <strong>freeCodeCamp</strong>, <strong>Codecademy</strong>, and <strong>MDN Web Docs</strong> are perfect for beginners.</p>
+      <p>Learn HTML for structure, CSS for style, and a little JavaScript for interactivity. These three form the foundation of every website on the internet.</p>
+    </section>
 
-        <section class="post">
-            <h2>Practice Regularly and Build Projects</h2>
-            <p>Practice is key to mastering any skill, including web design. Dedicate time each day to practice coding and build projects from scratch. Start with simple projects like creating a personal portfolio website or redesigning an existing website.</p>
-            <p>As you gain confidence and proficiency, challenge yourself with more complex projects and experiments.</p>
-        </section>
-    </div>
+    <section class="post">
+      <h2>Step 3 – Practice Every Day and Build Projects</h2>
+      <p>Consistency beats talent. Build something daily — even if small. Create your personal portfolio, redesign a favorite website, or clone a simple landing page.</p>
+      <p>Every project strengthens your skills and confidence. Remember: learning by doing is the fastest way to grow.</p>
+    </section>
+
+    <a href="../index.html#blogs">← Back to Blogs</a>
+  </div>
 </body>
 </html>

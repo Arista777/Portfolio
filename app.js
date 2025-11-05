@@ -35,3 +35,48 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById(button.dataset.id).classList.add("active");
         })
     });})
+
+
+    window.addEventListener("load", () => {
+  const hash = window.location.hash;
+
+  if (hash) {
+    const sectionId = hash.replace("#", "");
+    const targetSection = document.getElementById(sectionId);
+    const controls = document.querySelectorAll(".control");
+
+    // Quitar 'active' de todas las secciones y botones
+    document.querySelectorAll(".container").forEach(section => {
+      section.classList.remove("active");
+    });
+    controls.forEach(btn => btn.classList.remove("active-btn"));
+
+    // Activar la sección y botón correctos
+    if (targetSection) {
+      targetSection.classList.add("active");
+      const activeBtn = document.querySelector(`[data-id="${sectionId}"]`);
+      if (activeBtn) activeBtn.classList.add("active-btn");
+    }
+  }
+});
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+
+  if (hash) {
+    const sectionId = hash.replace("#", "");
+    const targetSection = document.getElementById(sectionId);
+    const controls = document.querySelectorAll(".control");
+
+    document.querySelectorAll(".container").forEach(section => {
+      section.classList.remove("active");
+    });
+    controls.forEach(btn => btn.classList.remove("active-btn"));
+
+    
+    if (targetSection) {
+      targetSection.classList.add("active");
+      const activeBtn = document.querySelector(`[data-id="${sectionId}"]`);
+      if (activeBtn) activeBtn.classList.add("active-btn");
+    }
+  }
+});

@@ -1,98 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding my way to heaven!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
-            color: #fff; /* Color de texto */
-            text-align: center;
-            width: 100%;
-        }
-        .header {
-              padding: 30px;
-              font-size: 30px;
-              text-align: justify;
-             
-              }
-        .container {
-            
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: justify;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center; /* Centrar el título */
-        }
-        .post {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding My Way to Heaven</title>
 
-            margin: 10px;
-            
-        }
-        .post h2 {
-            text-align: justify;
-            font-size: 20px;
-            
-        }
-        .post p {
-            
-            height: max-content;
-            margin: 10px;
-            text-align: justify;
-            
-            
-        }
-        a {
-            color: #fff; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block;
-            background-color: #2196F3; /* Color de fondo del botón */
-            padding: 8px 16px; /* Espaciado del botón */
-            border-radius: 5px; /* Bordes redondeados del botón */
-        }
-        a:hover {
-            background-color: #0b7dda; /* Cambio de color al pasar el mouse */
-        }
-        img {
-            text-align: justify;
-            overflow: hidden;
-            width: 70%;
-            height: 100%;
-        }
-    </style>
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --secondary: #0f172a;
+      --bg-dark: #0f2027;
+      --bg-light: #203a43;
+      --text: #f1f5f9;
+      --accent: #4fc3f7;
+      --radius: 12px;
+      --max-width: 900px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: var(--text);
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(15, 23, 42, 0.88);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(79, 195, 247, 0.4);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cde8ff;
+      margin-top: 10px;
+    }
+
+    .post {
+      margin-bottom: 40px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .post:hover {
+      transform: translateX(6px);
+      box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+    }
+
+    .post h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      color: #e2e8f0;
+      margin-bottom: 15px;
+    }
+
+    a.main-btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    a.main-btn:hover {
+      background-color: #81d4fa;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>Coding my way to heaven!</h1>
+  <div class="container">
+    <header>
+      <h1>Coding My Way to Heaven</h1>
+      <p>Dreams, discipline, and code — building a life through creation.</p>
     </header>
 
-    <div class="container">
-        <section class="post">
-            <h2>I have dreams, we all do! But how can we achieve them? Maybe this blog can help you debug your mind so we can all make it.</h2>
-            <p>Embarking on a journey to achieve our dreams can be both exciting and daunting. It requires dedication, perseverance, and a clear understanding of our goals.</p>
-            <p>This blog aims to provide insights and strategies for overcoming common obstacles and challenges on the path to success. Whether you're pursuing a career in coding or striving for personal growth, you'll find practical tips and motivational advice to help you navigate your journey.</p>
-        </section>
+    <section class="post">
+      <h2>We All Have Dreams — But How Do We Reach Them?</h2>
+      <p>Every dream begins as a spark — a quiet whisper in the mind that says *“there’s something greater waiting for me.”* But few people learn to listen to it long enough to turn it into reality. The truth is, chasing your dream is not about luck or timing — it’s about consistency and courage.</p>
+      <p>To reach your dream, you need to debug your own thoughts just like you debug your code. Identify the mental loops that keep you stuck: fear, procrastination, self-doubt. Replace them with clear structure — daily habits, vision, and constant iteration. Dreams don’t require perfection, they require persistence.</p>
+      <p>Progress comes when you fall in love with the process, not just the result. Like coding, every failure teaches you how to build something better next time.</p>
+    </section>
 
-        <section class="post">
-            <h2>Unlock Your Potential with Coding</h2>
-            <p>Coding is not just about writing lines of code; it's about unlocking your creativity and problem-solving skills. Whether you're building websites, developing applications, or automating tasks, coding empowers you to turn your ideas into reality.</p>
-            <p>By learning to code, you gain the ability to create, innovate, and make a positive impact on the world around you. This blog will explore the transformative power of coding and how it can help you reach new heights in your personal and professional life.</p>
-        </section>
+    <section class="post">
+      <h2>Unlock Your Potential with Coding</h2>
+      <p>Coding is one of the purest forms of creation. It’s where logic meets imagination — where your mind transforms ideas into reality. Through code, you learn patience, precision, and problem-solving — but more importantly, you learn that *you* can shape your own world.</p>
+      <p>Every line of code is a step toward mastery. Every bug you solve strengthens your resilience. Over time, coding becomes more than a technical skill; it becomes a mirror that reflects how you approach challenges in life.</p>
+      <p>When you learn to code, you stop waiting for opportunities — you create them. You start to think differently, to break problems down into smaller, conquerable parts. You realize that creativity is not chaos — it’s controlled structure, and that’s where power lives.</p>
+    </section>
 
-        <section class="post">
-            <h2>Overcoming Challenges and Building Resilience</h2>
-            <p>On the journey to success, you'll inevitably encounter obstacles and setbacks. From technical challenges to self-doubt and fear of failure, there will be moments when you feel like giving up.</p>
-            <p>But resilience is the key to overcoming adversity and achieving your goals. This blog will share strategies for building resilience, staying motivated, and bouncing back stronger after setbacks.</p>
-        </section>
-    </div>
+    <section class="post">
+      <h2>Resilience: The Key to Mastery</h2>
+      <p>No great coder — or human — ever became extraordinary without hitting walls. The difference between those who quit and those who rise lies in resilience. When your code fails, you don’t give up; you analyze, adapt, and try again. Life works the same way.</p>
+      <p>Resilience means staying calm when things break, trusting that every setback hides a valuable lesson. It means understanding that the best projects — like the best versions of ourselves — are built through patience, revision, and self-belief.</p>
+      <p>Success isn’t a straight line; it’s a recursive loop — fail, learn, improve, repeat. And each loop brings you one commit closer to your own “heaven”.</p>
+    </section>
+
+    <section class="post">
+      <h2>The Code Within</h2>
+      <p>In the end, “Coding My Way to Heaven” is not just about programming. It’s about life as a creative act — about realizing that you can rewrite your inner code as many times as necessary. Every day, you can push a new version of yourself, cleaner, more stable, and more aligned with who you want to become.</p>
+      <p>Heaven, after all, is not a place you go. It’s a mindset you build — one line, one lesson, and one dream at a time.</p>
+    </section>
+
+    <a href="../index.html#blogs" class="main-btn">← Back to Blogs</a>
+  </div>
 </body>
 </html>

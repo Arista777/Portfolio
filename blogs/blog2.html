@@ -1,106 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Become an Expert in Web Design</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
-            color: #fff; /* Color de texto */
-            text-align: center;
-            width: 100%;
-        }
-        .header {
-              padding: 30px;
-              font-size: 30px;
-              text-align: justify;
-             
-              }
-        .container {
-            
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: justify;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center; /* Centrar el título */
-        }
-        .post {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Become an Expert in Web Design</title>
+  <style>
+    :root {
+      --primary: #2196f3;
+      --secondary: #4caf50;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text: #f1f5f9;
+      --accent: #38bdf8;
+      --radius: 12px;
+      --max-width: 900px;
+    }
 
-            margin: 10px;
-            
-        }
-        .post h2 {
-            text-align: justify;
-            font-size: 20px;
-            
-        }
-        .post p {
-            
-            height: max-content;
-            margin: 10px;
-            text-align: justify;
-            
-            
-        }
-        a {
-            color: #fff; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block;
-            background-color: #2196F3; /* Color de fondo del botón */
-            padding: 8px 16px; /* Espaciado del botón */
-            border-radius: 5px; /* Bordes redondeados del botón */
-        }
-        a:hover {
-            background-color: #0b7dda; /* Cambio de color al pasar el mouse */
-        }
-        img {
-            text-align: justify;
-            overflow: hidden;
-            width: 70%;
-            height: 100%;
-        }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--text);
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: rgba(15, 23, 42, 0.85);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #d1e7ff;
+      margin-top: 10px;
+    }
+
+    .post {
+      margin-bottom: 40px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateX(6px);
+      background-color: rgba(56, 189, 248, 0.05);
+    }
+
+    .post h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .post:hover h2 {
+      color: #5eead4;
+    }
+
+    .post p {
+      margin-bottom: 15px;
+      color: #e2e8f0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .post:hover p {
+      transform: translateX(4px);
+      color: #f8fafc;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0b7dda;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>How to Become an Expert in Web Design</h1>
+  <div class="container">
+    <header>
+      <h1>How to Become an Expert in Web Design</h1>
+      <p>Master creativity, technology, and usability together</p>
     </header>
 
-    <div class="container">
-        <section class="post">
-            <h2>In this blog, we will learn about different environments and areas in which you can build your success as a web designer.</h2>
-            <p>Web design is a multifaceted field that encompasses various skills and disciplines. Whether you're interested in front-end development, user interface design, or user experience optimization, there are numerous paths you can take to become an expert in web design.</p>
-            <p>Throughout this blog, we'll explore essential concepts, tools, and strategies that will help you establish yourself as a proficient and successful web designer.</p>
-        </section>
+    <section class="post">
+      <h2>Introduction</h2>
+      <p>
+        Web design is a multifaceted field that combines art and technology to create engaging online experiences. Whether your focus is front-end development, UX design, or creative direction, mastering this discipline opens up countless opportunities.
+      </p>
+      <p>
+        In this guide, you'll explore the principles, tools, and mindset needed to become a confident, skilled, and successful web designer.
+      </p>
+    </section>
 
-        <section class="post">
-            <h2>Understand the Fundamentals of Web Design</h2>
-            <p>Before diving deep into the world of web design, it's crucial to understand the fundamental concepts. This includes learning HTML, CSS, and JavaScript, as they form the backbone of web development. Familiarize yourself with design principles, user experience (UX) design, and responsive design techniques.</p>
-            <p>Explore various online resources, such as tutorials, courses, and articles, to gain a solid understanding of these concepts.</p>
-            <p>Remember, a strong foundation is key to becoming an expert in web design.</p>
-        </section>
+    <section class="post">
+      <h2>1. Understand the Fundamentals</h2>
+      <p>
+        Before mastering the complex parts, ensure you have a solid grasp of the basics — HTML, CSS, and JavaScript. These are the building blocks of every site on the web.
+      </p>
+      <p>
+        Learn responsive design, accessibility, and how to structure content for clarity and impact. A solid foundation will allow you to innovate freely later.
+      </p>
+    </section>
 
-        <section class="post">
-            <h2>Explore Different Design Tools and Technologies</h2>
-            <p>As a web designer, it's essential to stay updated with the latest design tools and technologies. Explore popular design software like Adobe Photoshop, Sketch, and Adobe XD for creating mockups and prototypes. Learn about front-end frameworks like Bootstrap and libraries like jQuery to enhance your development process.</p>
-            <p>Experiment with different tools and technologies to find what works best for your workflow. Stay curious and always be willing to learn new techniques and tools.</p>
-        </section>
+    <section class="post">
+      <h2>2. Learn Design Tools and Frameworks</h2>
+      <p>
+        Familiarize yourself with key tools such as <strong>Figma</strong>, <strong>Adobe XD</strong>, and <strong>Sketch</strong>. These help visualize and prototype interfaces before coding.
+      </p>
+      <p>
+        On the coding side, try frameworks like <strong>Bootstrap</strong> or <strong>Tailwind CSS</strong> to speed up development and maintain design consistency.
+      </p>
+    </section>
 
-        <section class="post">
-            <h2>Develop Your Design Skills Through Practice</h2>
-            <p>Practice makes perfect, and this holds true for web design. Set aside time each day to work on design projects, whether it's designing a personal portfolio website, creating mockups for fictional clients, or participating in design challenges.</p>
-            <p>Seek feedback from peers and mentors to improve your designs continually. Don't be afraid to iterate and refine your work based on constructive criticism.</p>
-            <p>By consistently practicing and refining your design skills, you'll gradually become more proficient and confident as a web designer.</p>
-        </section>
-    </div>
+    <section class="post">
+      <h2>3. Practice, Iterate, and Build</h2>
+      <p>
+        Experience is the best teacher. Build personal projects, redesign existing websites, and test your designs on real users. Seek feedback and continuously refine your craft.
+      </p>
+      <p>
+        Consistency and curiosity are your best assets on the path to mastery.
+      </p>
+      <a href="../index.html#blogs">← Back to Blogs</a>
+    </section>
+  </div>
 </body>
 </html>

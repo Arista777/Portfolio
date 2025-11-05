@@ -1,110 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get started with Web Design and UI Design</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
-            color: #fff; /* Color de texto */
-            text-align: center;
-            width: 100%;
-        }
-        .header {
-              padding: 30px;
-              font-size: 30px;
-              text-align: justify;
-             
-              }
-        .container {
-            
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: justify;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center; /* Centrar el título */
-        }
-        .post {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started with Web Design and UI Design</title>
+  <style>
+    
+    :root {
+      --primary: #2196f3;
+      --secondary: #4caf50;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text: #f1f5f9;
+      --accent: #38bdf8;
+      --radius: 12px;
+      --max-width: 900px;
+    }
 
-            margin: 10px;
-            
-        }
-        .post h2 {
-            text-align: justify;
-            font-size: 20px;
-            
-        }
-        .post p {
-            
-            height: max-content;
-            margin: 10px;
-            text-align: justify;
-            
-            
-        }
-        a {
-            color: #fff; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block;
-            background-color: #2196F3; /* Color de fondo del botón */
-            padding: 8px 16px; /* Espaciado del botón */
-            border-radius: 5px; /* Bordes redondeados del botón */
-        }
-        a:hover {
-            background-color: #0b7dda; /* Cambio de color al pasar el mouse */
-        }
-        img {
-            text-align: justify;
-            overflow: hidden;
-            width: 70%;
-            height: 100%;
-        }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--text);
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    
+    .container {
+      background-color: rgba(15, 23, 42, 0.85);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #d1e7ff;
+      margin-top: 10px;
+    }
+
+    
+    .post {
+      margin-bottom: 40px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateX(6px);
+    }
+
+    .post h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      margin-bottom: 15px;
+      color: #e2e8f0;
+    }
+
+    .post ul {
+      list-style: disc;
+      margin-left: 25px;
+      color: #cbd5e1;
+    }
+
+   
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0b7dda;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Get started with Web Design and UI Design</h1>
+  <div class="container">
+    <header>
+      <h1>Get Started with Web Design and UI Design</h1>
+      <p>Turn ideas into beautiful, functional experiences</p>
     </header>
 
-    <div class="container">
-        <section class="post">
-            <h2>Understanding Web Design and UI Design</h2>
-            <p>Web design and UI design are crucial aspects of creating effective and engaging websites and applications. While web design focuses on the overall visual aesthetics and layout of a website, UI design is more concerned with the user interface elements and interactions.</p>
-            <p>This blog will provide an overview of both web design and UI design, covering topics such as color theory, typography, layout principles, usability, and user experience (UX) design. Whether you're a beginner looking to learn the basics or an experienced designer seeking to improve your skills, this blog has something for everyone.</p>
-        </section>
+    <section class="post">
+      <h2>Understanding Web Design and UI Design</h2>
+      <p>
+        Web design and UI design are crucial aspects of creating effective and engaging websites and applications. While web design focuses on the overall visual aesthetics and layout of a website, UI design is more concerned with the user interface elements and interactions.
+      </p>
+      <p>
+        This blog provides an overview of both disciplines — from color theory and typography to layout principles and UX. Whether you're a beginner or an experienced designer, you'll find practical insights to level up your creative skills.
+      </p>
+    </section>
 
-        <section class="post">
-            <h2>Getting Started with Web Design</h2>
-            <p>Before diving into web design, it's essential to understand the basic principles and tools used in the field. Web design encompasses various elements, including HTML, CSS, JavaScript, and graphic design principles.</p>
-            <p>In this section, we'll cover the fundamental concepts of web design, such as:</p>
-            <ul>
-                <li>HTML structure and tags</li>
-                <li>CSS styling and layout</li>
-                <li>Responsive design principles</li>
-                <li>Image optimization techniques</li>
-            </ul>
-        </section>
+    <section class="post">
+      <h2>Getting Started with Web Design</h2>
+      <p>
+        Before diving into web design, it's essential to understand the fundamental principles and tools. Web design brings together structure, style, and interaction to build a seamless user experience.
+      </p>
+      <p>Key concepts include:</p>
+      <ul>
+        <li>HTML structure and semantic tags</li>
+        <li>CSS styling and responsive layouts</li>
+        <li>Clean visual hierarchy and spacing</li>
+        <li>Image optimization and performance</li>
+      </ul>
+    </section>
 
-        <section class="post">
-            <h2>Introduction to UI Design</h2>
-            <p>UI design focuses on creating intuitive and visually appealing user interfaces for websites and applications. It involves designing interactive elements such as buttons, forms, navigation menus, and other components that users interact with.</p>
-            <p>In this section, we'll explore the key principles of UI design, including:</p>
-            <ul>
-                <li>Visual hierarchy and layout</li>
-                <li>Color theory and typography</li>
-                <li>Usability and user experience (UX)</li>
-                <li>Wireframing and prototyping</li>
-            </ul>
-        </section>
-    </div>
+    <section class="post">
+      <h2>Introduction to UI Design</h2>
+      <p>
+        UI design focuses on crafting intuitive and visually appealing interfaces for websites and apps. It’s about making every click feel natural and every page effortless to navigate.
+      </p>
+      <p>Core UI principles include:</p>
+      <ul>
+        <li>Visual hierarchy and clear navigation</li>
+        <li>Color theory and typography harmony</li>
+        <li>Usability and overall user experience (UX)</li>
+        <li>Wireframing and interactive prototyping</li>
+      </ul>
+    </section>
+
+    <section class="post">
+      <h2>Next Steps</h2>
+      <p>
+        Start experimenting — redesign your favorite homepage or build a mock interface on Figma.  
+        Every project you create sharpens your design eye.
+      </p>
+      <a href="../index.html#blogs" class="main-btn">
+  <span class="btn-text">← Back to Blogs</span>
+  <span class="btn-icon"><i class="fas fa-newspaper"></i></span>
+</a>
+
+    </section>
+  </div>
 </body>
 </html>

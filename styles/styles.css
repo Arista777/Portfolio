@@ -292,86 +292,61 @@ section {
 .about-stats .progress-bars .progress-bar {
   display: flex;
   flex-direction: column;
+  /* Hace que la barra se anime al aparecer */
 }
 .about-stats .progress-bars .progress-bar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-grey-1);
+  margin-bottom: 0.5rem;
 }
 .about-stats .progress-bars .progress-bar .progress-con {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .about-stats .progress-bars .progress-bar .progress-con .prog-text {
   color: var(--color-grey-2);
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  min-width: 45px;
+  text-align: right;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress {
-  width: 100%;
-  height: 0.45rem;
+  flex: 1;
+  height: 0.6rem;
   background-color: var(--color-grey-4);
-  margin-left: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
   position: relative;
+  /* Esto hace que el ancho se tome del atributo data-width */
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress span {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   height: 100%;
-  background-color: var(--color-secondary);
-  transition: all 0.4s ease-in-out;
-  width: 60%;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: 10px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 95%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .mern {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .git {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .wordpress {
-  width: 95%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .figma {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .typescript {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .sql {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .r {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .power {
-  width: 80%;
-}
-
-.stat-title {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 3.5rem 0;
-  position: relative;
-}
-.stat-title::before {
-  content: "";
+.about-stats .progress-bars .progress-bar .progress-con .progress span::before {
+  content: attr(data-width);
   position: absolute;
-  left: 50%;
-  top: 0;
-  width: 40%;
-  height: 1px;
-  background-color: var(--color-grey-5);
-  transform: translateX(-50%);
+  left: -9999px; /* oculto, solo sirve para leer el valor */
+}
+.about-stats .progress-bars .progress-bar:hover span {
+  filter: brightness(1.2);
 }
 
+/* Animación automática al cargar */
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
 /*Timeline*/
 .timeline {
   margin-bottom: 0.5rem;
